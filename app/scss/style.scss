@@ -44,7 +44,7 @@
      .header__user {
          font-size: 16px;
          color: #0674ec;
-         &-name {
+         .user-name {
              padding-bottom: 10px;
              color: #333;
          }
@@ -72,7 +72,7 @@
                  transition: all .3s;
                  padding-bottom: 5px;
                  &:hover {
-                     border-bottom: 1px solid #333;
+                     color: #0674ec;
                  }
              }
              &+li {
@@ -157,14 +157,37 @@
      }
      
      .search-category__inner {
-         width: 1142px;
-         text-align: center;
-         background-color: #fff;
-         padding: 40px 0;
-         margin-top: 100px;
-         border-radius: 6px;
-         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
          position: relative;
+         .search-category-bgf {
+             position: absolute;
+             border-radius: 6px;
+             width: 1080px;
+             height: 135px;
+             background-color: rgb(255, 255, 255);
+             opacity: 0.502;
+             top: 50px;
+             right: -4px;
+         }
+         .search-category-bgs {
+             border-radius: 6px;
+             background-color: rgb(255, 255, 255);
+             opacity: 0.502;
+             position: absolute;
+             right: -17px;
+             top: 74px;
+             width: 1110px;
+             height: 135px;
+         }
+         .search-category-bgt {
+             width: 1142px;
+             text-align: center;
+             background-color: #fff;
+             padding: 40px 0;
+             margin-top: 100px;
+             border-radius: 6px;
+             box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+             position: absolute;
+         }
          input {
              width: 808px;
              height: 50px;
@@ -235,3 +258,101 @@
      }
      
      //end advantages
+     //start slider
+     .slider__inner-content {
+         padding-top: 120px;
+     }
+     
+     .slider__items {
+         background-color: #fff;
+         margin-top: 50px;
+     }
+     
+     .slider__title {
+         background-color: #fff;
+         padding: 45px 30px;
+         border-radius: 3px;
+     }
+     
+     .item {
+         display: flex;
+         justify-content: space-between;
+         padding-right: 50px;
+         min-height: 455px;
+         &__img {
+             max-width: 555px;
+             width: 100%;
+             height: 452px;
+             background-color: #4e5760;
+         }
+         &__content {
+             width: 475px;
+         }
+         &__title {
+             font-size: 24px;
+             font-weight: 500;
+             padding: 50px 0;
+         }
+         &__author {
+             display: flex;
+             justify-content: start;
+             padding-bottom: 40px;
+             .user-name {
+                 margin-left: 40px;
+             }
+             .item__category {
+                 margin-left: 45px;
+                 color: #7347c1;
+                 font-size: 15px;
+             }
+         }
+         &__text {
+             font-size: 16px;
+             line-height: 30px;
+             color: #555555;
+             padding-bottom: 40px;
+         }
+         &__cagories {
+             padding-bottom: 45px;
+             border-bottom: 1px solid #ececec;
+             button {
+                 outline: none;
+                 border-radius: 25px;
+                 border: none;
+                 transition: all .3s;
+                 &:hover {
+                     background-color: #0675ecbe;
+                     a {
+                         color: #fff;
+                     }
+                 }
+             }
+             a {
+                 font-size: 15px;
+                 color: #868c96;
+                 padding: 8px 14px;
+             }
+         }
+         &__info {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             &-price {
+                 width: 100px;
+                 padding: 10px 0;
+                 text-align: center;
+                 background-color: #0674ec;
+                 border-radius: 25px;
+                 color: #fff;
+             }
+             &-sales {
+                 color: #0674ec;
+                 transition: all .3s;
+                 &:hover {
+                     color: #000;
+                 }
+             }
+         }
+     }
+     
+     //end slider
