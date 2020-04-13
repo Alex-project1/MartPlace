@@ -44,6 +44,14 @@
      .header__user {
          font-size: 16px;
          color: #0674ec;
+         display: flex;
+         .user__avatar {
+             width: 50px;
+             height: 50px;
+             border-radius: 50%;
+             background-color: #7c7979;
+             margin-right: 22px;
+         }
          .user-name {
              padding-bottom: 10px;
              color: #333;
@@ -107,6 +115,14 @@
              transition: all .3s;
              &:hover {
                  background-color: #0675ecbe;
+             }
+             &::before {
+                 content: '\e86f';
+                 position: absolute;
+                 font-family: 'Linearicons-Free';
+                 color: #fff;
+                 top: 13px;
+                 right: 25px;
              }
          }
      }
@@ -259,23 +275,60 @@
      
      //end advantages
      //start slider
-     .slider__inner-content {
-         padding-top: 120px;
+     .slider__inner {
+         .slider__inner-content {
+             padding-top: 120px;
+             position: relative;
+         }
+         .slider__items {
+             background-color: #fff;
+             margin-top: 50px;
+         }
+         .slider__inner-top {
+             background-color: #fff;
+             padding: 45px 30px;
+             border-radius: 3px;
+             display: flex;
+             justify-content: space-between;
+         }
+         .slider__btn {
+             width: 100px;
+             height: 45px;
+             background-color: #7347c1;
+             border-radius: 25px;
+         }
      }
      
-     .slider__items {
-         background-color: #fff;
-         margin-top: 50px;
+     .slick-prev,
+     .slick-next {
+         background-color: transparent;
+         border: none;
+         outline: none;
      }
      
-     .slider__title {
-         background-color: #fff;
-         padding: 45px 30px;
-         border-radius: 3px;
+     .slick-prev::before,
+     .slick-next:before {
+         font-family: 'Linearicons-Free';
+         font-size: 14px;
+         color: #fff;
+         position: absolute;
+         cursor: pointer;
+     }
+     
+     .slick-prev::before {
+         content: '\e875';
+         top: -125px;
+         right: 95px;
+     }
+     
+     .slick-next:before {
+         content: '\e876';
+         top: -125px;
+         right: 50px;
      }
      
      .item {
-         display: flex;
+         display: flex!important;
          justify-content: space-between;
          padding-right: 50px;
          min-height: 455px;
@@ -287,18 +340,27 @@
          }
          &__content {
              width: 475px;
+             display: block;
+             margin-left: 50px;
          }
          &__title {
              font-size: 24px;
              font-weight: 500;
-             padding: 50px 0;
+             padding-top: 30px;
          }
          &__author {
              display: flex;
              justify-content: start;
-             padding-bottom: 40px;
+             padding-top: 15px;
+             align-items: center;
              .user-name {
-                 margin-left: 40px;
+                 margin-left: 20px;
+             }
+             .item-user-avatar {
+                 width: 30px;
+                 height: 30px;
+                 border-radius: 50%;
+                 background-color: #7347c1;
              }
              .item__category {
                  margin-left: 45px;
@@ -308,12 +370,13 @@
          }
          &__text {
              font-size: 16px;
-             line-height: 30px;
+             line-height: 25px;
              color: #555555;
-             padding-bottom: 40px;
+             padding-top: 25px;
          }
          &__cagories {
-             padding-bottom: 45px;
+             padding-top: 30px;
+             padding-bottom: 40px;
              border-bottom: 1px solid #ececec;
              button {
                  outline: none;
@@ -337,6 +400,7 @@
              display: flex;
              justify-content: space-between;
              align-items: center;
+             margin-top: 45px;
              &-price {
                  width: 100px;
                  padding: 10px 0;
