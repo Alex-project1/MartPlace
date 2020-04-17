@@ -27,6 +27,7 @@
          width: 140px;
          height: 36px;
          background-color: #0674ec;
+         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
          border-radius: 25px;
          border: none;
          font-size: 14px;
@@ -39,12 +40,13 @@
          &:hover {
              background-color: #0675ecbe;
          }
-     }
+     }      
      
      .header__user {
-         font-size: 16px;
-         color: #0674ec;
+         font-size: 16px;         
          display: flex;
+         color: #333333;
+         
          .user__avatar {
              width: 50px;
              height: 50px;
@@ -52,18 +54,24 @@
              background-color: #7c7979;
              margin-right: 22px;
          }
-         .user-name {
-             padding-bottom: 10px;
-             color: #333;
-         }
      }
+     .header__user-balans{
+        padding-top: 10px;
+        color: #0674ec;
+     }
+    
      
      .header__menu-inner {
          display: flex;
          justify-content: space-between;
          align-items: center;
+         height: 80px;
      }
-     
+     .uaser{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
      .menu {
          display: flex;
          align-items: center;
@@ -121,12 +129,63 @@
                  position: absolute;
                  font-family: 'Linearicons-Free';
                  color: #fff;
-                 top: 13px;
+                 top: 15px;
                  right: 25px;
              }
          }
      }
-     
+     .header__circle{
+         padding-right: 15px;
+     }
+     .header__circle-item{
+         padding-right: 35px;
+         position: relative;
+         transition: all .3s;
+         span{
+             position: absolute;
+             height: 22px;
+             min-width: 22px;
+             border-radius: 50%;
+             font-size: 14px;
+             right: 20px;
+             top: 2px;
+             line-height: 20px;
+             text-align: center;
+             color: #fff;
+             padding-right: 6px;
+             padding-left: 6px;
+         }
+         &:hover{
+            color: #000;
+         }
+     }
+     .notification{
+         span{
+             background-color: #ff6a6c;
+         }         
+     }
+     .message{
+         span{
+             background-color: #62d03b;
+         }
+     }
+     .basket{
+         span{
+             background-color: #0674ec;
+         }
+     }
+
+
+    .lnr-alarm,
+    .lnr-envelope,
+    .lnr-cart{
+        font-family: 'Linearicons-Free';    
+        padding-top: 16px;
+        font-size: 20px;
+        color: #7e8fa1;
+    }
+    
+
      //end header
      //start products
      .products {
@@ -134,6 +193,7 @@
          height: 725px;
      }
      
+      
      .products__inner {
          margin: 0 auto;
          color: #f3f3f8;
@@ -141,8 +201,10 @@
              text-align: center;
              font-size: 60px;
              padding-top: 180px;
-             padding-bottom: 100px;
+             padding-bottom: 36px;
              font-weight: 500;
+             text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+             line-height: 70px;
              span {
                  display: block;
                  font-weight: 900;
@@ -164,13 +226,16 @@
                  border-radius: 25px;
                  font-size: 16px;
                  color: #fff;
+                 box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+                  }
+                  
              }
              .active {
                  background-color: #fff;
                  color: #0674ec;
              }
          }
-     }
+     
      
      .search-category__inner {
          position: relative;
@@ -210,13 +275,15 @@
              outline: none;
              padding-left: 30px;
              margin-right: 30px;
+             border-radius: 3px;
+             border-color: #dcdcdc;
          }
          button {
              width: 222px;
              height: 54px;
              background-color: #0674ec;
              color: #fff;
-             border-radius: 3px;
+            
              outline: none;
              border: none;
              cursor: pointer;
@@ -366,6 +433,9 @@
                  margin-left: 45px;
                  color: #7347c1;
                  font-size: 15px;
+                 img {
+                     display: inline-block;
+                 }
              }
          }
          &__text {
