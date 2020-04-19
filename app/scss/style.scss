@@ -504,13 +504,12 @@
       &:hover {
         color: #000;
       }
-      
     }
   }
 }
 
 .item__info-like {
-    position: relative;
+  position: relative;
   &::before {
     content: "\e813";
     font-family: "Linearicons-Free";
@@ -520,13 +519,223 @@
   }
 }
 
-.item__info-sales{
-    position: relative;
-    &::before {
-        content: "\e82e";
-        font-family: "Linearicons-Free";
-        position: absolute;
-        right: 33px;
-      }
+.item__info-sales {
+  position: relative;
+  &::before {
+    content: "\e82e";
+    font-family: "Linearicons-Free";
+    position: absolute;
+    right: 33px;
+  }
 }
 //end slider
+//start footer
+.footer__box {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__title {
+  font-size: 18px;
+  color: #fff;
+  padding-bottom: 33px;
+}
+.footer__info {
+  background-color: #262b30;
+  padding-top: 115px;
+  padding-bottom: 125px;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+  &-text {
+    font-size: 24px;
+    a {
+      color: #000;
+    }
+  }
+  span {
+    color: #0674ec;
+  }
+}
+
+.footer__column {
+  width: 267px;
+  font-size: 15px;
+  line-height: 28px;
+  color: #ababab;
+  a {
+    padding-bottom: 10px;
+  }
+}
+.footer_list {
+  width: 200px;
+  padding-left: 77px;
+}
+.footer__column-text {
+  margin-bottom: 15px;
+}
+.footer__adress {
+  a {
+    color: #ababab;
+    padding-left: 30px;
+    transition: all 0.3s;
+    &:hover {
+      color: #0674ec;
+    }
+  }
+}
+
+.footer__adress-phone,
+.footer__adress-email,
+.footer__adress-map {
+  font-family: "Linearicons-Free";
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  transition: all 0.3s;
+  &:hover {
+    color: #0674ec;
+  }
+}
+.footer__adress-phone::before {
+  content: "\e830";
+  position: absolute;
+}
+.footer__adress-email::before {
+  content: "\e818";
+  position: absolute;
+}
+.footer__adress-map::before {
+  content: "\e833";
+  position: absolute;
+  top: 15px;
+}
+
+.about-us {
+  padding-left: 78px;
+}
+.footer__column-list {
+  font-size: 15px;
+  li {
+    a {
+      color: #ababab;
+      transition: all 0.3s;
+      &:hover {
+        color: #0674ec;
+      }
+    }
+  }
+}
+.footer__column-social {
+  width: 362px;
+  padding-left: 60px;
+}
+.footer__colum-search {
+  input {
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    height: 50px;
+    padding-left: 30px;
+    color: #ababab;
+    font-size: 15px;
+    outline: none;
+    position: relative;
+  }
+  button {
+    width: 100px;
+    height: 50px;
+    background-color: #0674ec;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    right: 395px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    &:hover {
+      background-color: #0675ecbe;
+    }
+  }
+}
+
+.footer__column-social-icon {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  .footer-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+        position: absolute;
+        font-family: "icomoon";
+        color: #fff;
+        right: 12px;
+        top: 7px;
+  }
+}
+}
+
+.footer-icon-facebook {
+  background-color: #395799;
+  &::before {
+    content: "\ea90";
+  }
+}
+
+.footer-icon-twit {
+  background-color: #19b2f5;
+  &::before {
+    content: "\ea96";
+  }
+}
+.footer-icon-google {
+  background-color: #f05b44;
+  &::before {
+    content: "\ea88";
+  }
+}
+
+.footer-icon-p {
+  background-color: #9c0c1c;
+  &::before {
+    content: "\ead1";
+  }
+}
+
+.footer-icon-in {
+  background-color: #0da6be;
+  &::before {
+    content: "\eaca";
+  }
+}
+
+.footer-icon-ball {
+  background-color: #ea4c89;
+  &::before {
+    content: "\eaa7";
+  }
+}
+
+.footer__signature{
+    height: 95px;
+    width: 100%;
+    background-color: #192027;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    color: #999999;
+    a{
+        color: #fff;
+        transition: all .3s;
+        &:hover{
+            color: #0674ec;
+        }
+    }
+}
+//end footer
